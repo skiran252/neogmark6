@@ -60,6 +60,8 @@
                 .then(response => response.json())
                 .then(data => {
                     destinationText.value = data.contents.translated;
+                }).catch((err)=>{
+                    alert("ERROR: RATE LIMIT EXCEEDED");
                 });
         });
     </script>
